@@ -1,4 +1,5 @@
-
+# This file searches for news articles which relate to Natural Disasters that are occuring in the world.
+# It requires you to change the country inputted to which then it finds natural disasters from that country. 
 
 #import requests
 import json
