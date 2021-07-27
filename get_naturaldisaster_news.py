@@ -6,7 +6,7 @@ from newsapi import NewsApiClient
 
 api = NewsApiClient(api_key='cc17316ba8b84f2eb4aa4d76a6b7d1a5')
 
-country_inputted = 'Argentina'    # Country chosen
+country_inputted = 'Japan'    # Country chosen
 natural_disasters = '(floods OR typhoon OR hurricane OR bushfires OR cyclone OR drought OR rising temperatures OR flooding OR avalanche OR earthquake OR volcano OR heatwave OR famine)' # Natural disaster
 natural_disasters_list = ["floods","typhoon","hurricane","storm","bushfires","cyclone","drought","heat","rising temperatures","flooding"]
 #disaster_words = '(kills OR deaths OR destruction)'#disaster words
@@ -35,12 +35,12 @@ for article in list_of_articles:
 
 # This chunk of code ensures that the article that is picked up by the code actually
 # mentions a natural disaster.
-    check=0
+    word_check=False
     for word in natural_disasters_list:
         if word in article_description:
-            check=1
+            word_check=True
 
-    if check==0:
+    if word_check==False:
         continue
 
 
