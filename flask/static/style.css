@@ -1,4 +1,4 @@
-* {
+ * {
 
   font-size: 1.5rem;
   background: black;
@@ -14,6 +14,13 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0rem 0rem 0rem 0rem black;
+}
+
+.hello{
+
+  margin-top:2.5rem;
+  padding-bottom: 300rem;
+  background-color: white;
 }
 
 input {
