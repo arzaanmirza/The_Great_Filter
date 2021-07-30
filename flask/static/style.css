@@ -1,9 +1,8 @@
  * {
 
   font-size: 1.5rem;
-  background: black;
-}
 
+}
 
 .input-wrapper{
 
@@ -11,16 +10,53 @@
   align-items: center;
   background: black;
   color: white;
-  padding: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0rem 0rem 0rem 0rem black;
+  margin-top: 0.5rem
+  /* box-shadow: 0rem 0rem 0rem 0rem black; */
+}
+.News_Blocks{
+
+margin-top: 1rem;
+background-color: white;
+color: black;
+padding-bottom: 20rem;
+
 }
 
-.hello{
+article_title{
 
-  margin-top:2.5rem;
-  padding-bottom: 300rem;
-  background-color: white;
+  background: white;
+  color: black;
+  text-align: left;
+  font-size:20px;
+}
+
+media_source{
+  background: white;
+  color: black;
+  text-align: left;
+  font-size:25px;
+
+}
+
+article_url{
+
+  background: white;
+  color: black;
+  text-align: left;
+  font-size:14px;
+}
+
+description{
+
+  background: white;
+  color: black;
+  text-align: left;
+  font-size:18px;
 }
 
 input {

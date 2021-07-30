@@ -1,6 +1,8 @@
 from app import app
 from flask import render_template, request, redirect, url_for
-
+from get_climatechange_news import get_climatechange_news
+from get_naturaldisaster_news import get_naturaldisaster_news
+import json
 
 @app.route('/', methods=["POST","GET"])
 def search():
@@ -13,13 +15,28 @@ def search():
 
 @app.route("/<name_of_country>", methods=["POST","GET"])
 def country_page(name_of_country):
-    print(name_of_country)
+
+    # country_check_result = country_checker(name_of_country)
+    data_to_send = get_naturaldisaster_news(name_of_country)
+
+    # If the returning articles list is empty then redirect it to the home search page.
+    if not data_to_send:
+        return redirect(url_for("search"))
+
     if request.method == "POST":
         country = request.form["query"]
         return redirect(url_for("country_page", name_of_country=country))
     else:
-        return render_template("index.html")
+        return render_template("index.html",country=name_of_country,data=data_to_send)
+
+
+
+
+
+
+
+
 
 # You are able to take the function call of the country name. Now you have to take the country
 # and put it through the functions that you have created to return results. Once you have returned the results
-# you have to find a way to display them on a html file. 
+# you have to find a way to display them on a html file.
