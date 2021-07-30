@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block news_block %}
+
+<div class="News_Blocks">
+  <h4>{{country}}<h4>
+
+  <article class="First">
+    <media_source>{{data[0]["Media"]}}</media_source>
+    <article_title>{{data[0]["Article Title"]}}</article_title>
+    <description>{{data[0]["Description"]}}</description>
+    <article_url>{{data[0]["Article URL"]}}</article_url>
+  </article>
+
+
+
+
+</div>
+
+{% endblock %}

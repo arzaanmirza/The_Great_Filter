@@ -1,0 +1,28 @@
+* {
+
+  font-size: 1.5rem;
+  background: black;
+}
+
+
+.input-wrapper{
+
+  display: flex;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 0rem 0rem black;
+}
+
+input {
+
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+}
