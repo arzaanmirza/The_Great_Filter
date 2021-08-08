@@ -4,6 +4,7 @@
 #import requests
 import json
 from newsapi import NewsApiClient
+from image_capture_database import image_capture_database
 
 def get_climatechange_news(country_inputted):
 
@@ -25,6 +26,7 @@ def get_climatechange_news(country_inputted):
         media_source = article["source"]["name"] # Finds the name of the media source
         article_description = article["description"] #Finds the description of the article
         article_url = article["url"]          #Finds the url of the article
+        image_inside_article_url = image_capture_database(article["title"])
 
 
     #This if-statement ensures that the country is in the description
@@ -46,9 +48,11 @@ def get_climatechange_news(country_inputted):
                 "Media": media_source,
                 "Article Title": title,
                 "Description": article_description,
-                "Article URL": article_url
+                "Article URL": article_url,
+                "Image URL": image_inside_article_url,
 
             }
+            print(data["Image URL"])
             # print(data)
             list_of_related_articles.append(data)
 
