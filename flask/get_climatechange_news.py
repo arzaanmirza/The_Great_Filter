@@ -17,7 +17,7 @@ def get_climatechange_news(country_inputted):
     data = api.get_everything(q=query_string)
 
     list_of_articles = data["articles"]
-
+    list_of_related_articles = []
     count = 0
     for article in list_of_articles:
 
@@ -36,13 +36,26 @@ def get_climatechange_news(country_inputted):
             continue
 
     # Printing commands:
-        print(media_source) # Finds the name of the media source
-        print(f"Article Title: {title} ")
-        print(f"Description: {article_description} ")
-        print(f"Article URL: {article_url} ") #Prints the url of the article
+        # print(media_source) # Finds the name of the media source
+        # print(f"Article Title: {title} ")
+        # print(f"Description: {article_description} ")
+        # print(f"Article URL: {article_url} ") #Prints the url of the article
+
+            data = {
+
+                "Media": media_source,
+                "Article Title": title,
+                "Description": article_description,
+                "Article URL": article_url
+
+            }
+            # print(data)
+            list_of_related_articles.append(data)
 
 
         count = count + 1
         print("\n")
+
+    return list_of_related_articles
 
     #print(count)

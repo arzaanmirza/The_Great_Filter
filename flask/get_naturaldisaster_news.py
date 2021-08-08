@@ -62,7 +62,7 @@ def get_naturaldisaster_news(country_inputted):
             "Article URL": article_url
 
         }
-        print(data)
+        # print(data)
         list_of_related_articles.append(data)
 
         count = count + 1
