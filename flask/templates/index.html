@@ -1,15 +1,50 @@
 {% extends "base.html" %}
 {% block news_block %}
 
-<div class="News_Blocks">
+
   <h4>{{country}}<h4>
 
-  <article class="First">
-    <media_source>{{data[0]["Media"]}}</media_source>
-    <article_title>{{data[0]["Article Title"]}}</article_title>
-    <description>{{data[0]["Description"]}}</description>
-    <article_url>{{data[0]["Article URL"]}}</article_url>
-  </article>
+
+
+    {% for item in data %}
+
+    <a href= {{item["Article URL"]}} target="_blank">
+
+      <div class="Box">
+
+        <div>
+
+          <img src="https://www.gannett-cdn.com/presto/2021/08/05/USAT/c05dbb6a-3a11-41a3-8865-71ed5e295cc8-AFP_AFP_9JE7YN.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp" alt="Joe_Biden">
+
+          <div class="Text_Box">
+
+            <media_source>{{item["Media"]}}</media_source> </br>
+
+            <a href= {{item["Article URL"]}} target="_blank">
+
+            <article_title>{{item["Article Title"]}}</article_title>
+
+            </a>
+            </br> </br>
+            <!-- <description>{{item["Description"]}}</description> </br> -->
+            <!-- <article_url>{{item["Article URL"]}}</article_url> -->
+
+          </div>
+
+        </div>
+      </div>
+
+    </a>
+
+    {% endfor %}
+
+
+
+
+
+
+
+
 
 
 

@@ -2,4 +2,4 @@ from app import app
 import views
 
 if __name__ == '__main__':
-    app.run(port=8980)
+    app.run(port=8975)
