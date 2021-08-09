@@ -4,6 +4,61 @@
   font-size: 1.5rem;
 }
 
+h1 {
+   color: white;
+   font-family: 'Helvetica Neue',sans-serif;
+   font-size: 125px;
+   font-weight: bold;
+   letter-spacing: -1px;
+   line-height: 1;
+   text-align:
+   center;
+}
+
+
+h2 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 72px;
+  text-align: center;
+}
+
+
+h3 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 18px;
+  margin: 0 0 100px;
+  text-align: center;
+}
+
+
+.button1{
+  border: 3px solid #3498db;
+  background: #3498db;
+  padding 20px 40px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Helvetica Neue',sans-serif;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: center;
+  color: white;
+  margin-left: 520px;
+}
+
+.button1:hover{
+
+  color: #3498db;
+}
+
+
 .input-wrapper{
 
   display: flex;
