@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block news_block %}
+
+
+  <h4>{{country}}<h4>
+
+
+
+    {% for item in data %}
+
+    <a href= {{item["Article URL"]}} target="_blank">
+
+      <div class="Box">
+
+        <div>
+
+          <img src= {{item["Image URL"]}} >
+
+          <div class="Text_Box">
+
+            <media_source>{{item["Media"]}}</media_source> </br>
+
+            <a href= {{item["Article URL"]}} target="_blank">
+
+            <article_title>{{item["Article Title"]}}</article_title>
+
+            </a>
+            </br> </br>
+            <!-- <description>{{item["Description"]}}</description> </br> -->
+            <!-- <article_url>{{item["Article URL"]}}</article_url> -->
+
+          </div>
+
+        </div>
+      </div>
+
+    </a>
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
