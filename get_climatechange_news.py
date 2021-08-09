@@ -5,6 +5,7 @@
 import json
 from newsapi import NewsApiClient
 from image_capture_database import image_capture_database
+from image_capture import image_capture
 
 def get_climatechange_news(country_inputted):
 
@@ -26,7 +27,21 @@ def get_climatechange_news(country_inputted):
         media_source = article["source"]["name"] # Finds the name of the media source
         article_description = article["description"] #Finds the description of the article
         article_url = article["url"]          #Finds the url of the article
-        image_inside_article_url = image_capture_database(article["title"])
+
+
+
+    #This chunk of code finds the image url of the article and adds it onto the dictionary
+    # The point of it is so that a photo can be attached with the article on the website.
+
+    # Right now it only works with reuters articles.
+        if media_source == "Reuters":
+            image_inside_article_url = image_capture(article_url)
+        else: # This else statement is only there so that the next if statement works.
+            image_inside_article_url = "empty_string"
+
+        # Checks if image_capture() function has returned an empty_string or not.
+        if image_inside_article_url == "empty_string":
+            image_inside_article_url = image_capture_database(title)
 
 
     #This if-statement ensures that the country is in the description
