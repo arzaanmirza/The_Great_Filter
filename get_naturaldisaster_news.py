@@ -1,7 +1,6 @@
 # This file searches for news articles which relate to Natural Disasters that are occuring in the world.
 # It requires you to change the country inputted to which then it finds natural disasters from that country.
 
-#import requests
 import json
 from newsapi import NewsApiClient
 from image_capture_database import image_capture_database
@@ -9,20 +8,19 @@ from image_capture import image_capture
 
 def get_naturaldisaster_news(country_inputted):
 
-    api = NewsApiClient(api_key='cc17316ba8b84f2eb4aa4d76a6b7d1a5')
-    #country_inputted = 'Japan'    # Country chosen
+    #This is the news api key which you can get from https://newsapi.org/
+    api = NewsApiClient(api_key='api_key')
+
     natural_disasters = '(floods OR typhoon OR hurricane OR bushfires OR cyclone OR drought OR rising temperatures OR flooding OR avalanche OR earthquake OR volcano OR heatwave OR famine)' # Natural disaster
     natural_disasters_list = ["floods","typhoon","hurricane","storm","bushfires","cyclone","drought","heat","rising temperatures","flooding"]
-    #disaster_words = '(kills OR deaths OR destruction)'#disaster words
 
-    query_string = "("+country_inputted + ' AND ' + natural_disasters+")" #+ ' OR ' + disaster_words # Query statement
-    #news_sources='bbc-news,reuters,abc-news,cnn,foxnews,times-of-india,the-guardian' #All the news sources where you want to search from
 
+    query_string = "("+country_inputted + ' AND ' + natural_disasters+")" # Query statement
     data = api.get_everything(q=query_string)
 
     list_of_articles = data["articles"]
     list_of_related_articles = []
-    count = 0
+
     for article in list_of_articles:
 
         title = article["title"]         # Finds the name of the article title
@@ -33,7 +31,7 @@ def get_naturaldisaster_news(country_inputted):
 
 
     #This chunk of code finds the image url of the article and adds it onto the dictionary
-    # The point of it is so that a photo can be attached with the article on the website.
+    #The point of it is so that a photo can be attached with the article on the website.
 
     # Right now it only works with reuters articles.
         if media_source == "Reuters":
@@ -62,14 +60,7 @@ def get_naturaldisaster_news(country_inputted):
         if word_check==False:
             continue
 
-    # Printing commands:
-        # print(media_source) # Finds the name of the media source
-        # print(f"Article Title: {title} ")
-        # print(f"Description: {article_description} ")
-        # print(f"Article URL: {article_url} ") #Prints the url of the article
-        #data = "Media : "+media_source+"\n"+"Article Title: "+title+"\n"+"Description: "+article_description+"\n"+"Article URL: "+article_url
-        #print(data)
-
+    # Save the variables in a dictionary.
         data = {
 
             "Media": media_source,
@@ -79,11 +70,7 @@ def get_naturaldisaster_news(country_inputted):
             "Image URL": image_inside_article_url,
 
         }
-        # print(data)
+
         list_of_related_articles.append(data)
 
-        count = count + 1
-        print("\n")
-
     return list_of_related_articles
-#print(count)
