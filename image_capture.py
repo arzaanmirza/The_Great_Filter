@@ -11,8 +11,6 @@ def image_capture(url):
     html = requests.get(url)
     text_block = html.text
 
-    # soup = bs(requests.get(url).content, "html.parser")
-    # text_block = soup.find_all('*img')
     pattern = "img src=\"(.*?)\""
     substring = re.search(pattern,text_block)
 
