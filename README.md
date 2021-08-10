@@ -3,9 +3,6 @@
 
 The Great Filter - A new way to consume news.
 
-Codebase: https://github.com/arzaanmirza/The_Great_Filter_Codebase
-
-
 
 Home Page:
 
