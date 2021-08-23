@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, Flask
 from get_climatechange_news import get_climatechange_news
 from get_naturaldisaster_news import get_naturaldisaster_news
 import json
