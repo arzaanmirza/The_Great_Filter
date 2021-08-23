@@ -16,20 +16,24 @@ Home Page:
 
 
 
-After Searching for a country (In this case Germany):
+After Searching for a country (In this case China):
 
 
 
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/128737608-ed997f45-685c-4f01-8bda-8eeaa1578876.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/130459720-a9276471-81f1-4903-bbbf-60c1aa41cd3a.png">
+
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/130459970-68c3bd62-5714-447e-9593-7367a86ce36a.png">
+
 
 
 
 Clicking on an article preview opens a new tab of the article:
 
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/128738267-dc6dacb7-8243-4560-a786-e7bf187ff121.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/130460233-dc763476-cf13-4f26-8c7f-0de76b27c3b6.png">
 
 
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/128738506-ce965ed3-9785-4e15-a252-0c9431c51d03.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/130460443-95d2d7ec-a847-4b2d-a81c-eee5c7b150b4.png">
 
 
 
