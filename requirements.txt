@@ -13,6 +13,7 @@ itsdangerous==2.0.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
 newsapi==0.1.1
+newsapi-python==0.2.6
 numpy==1.21.2
 paramiko==2.7.2
 pathlib2==2.3.6
