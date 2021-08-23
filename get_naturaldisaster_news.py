@@ -9,7 +9,7 @@ from image_capture import image_capture
 def get_naturaldisaster_news(country_inputted):
 
     #This is the news api key which you can get from https://newsapi.org/
-    api = NewsApiClient(api_key='api_key')
+    api = NewsApiClient(api_key='cc17316ba8b84f2eb4aa4d76a6b7d1a5')
 
     natural_disasters = '(floods OR typhoon OR hurricane OR bushfires OR cyclone OR drought OR rising temperatures OR flooding OR avalanche OR earthquake OR volcano OR heatwave OR famine)' # Natural disaster
     natural_disasters_list = ["floods","typhoon","hurricane","storm","bushfires","cyclone","drought","heat","rising temperatures","flooding"]
