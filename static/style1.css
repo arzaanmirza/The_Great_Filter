@@ -1,7 +1,41 @@
 *{
 
-  background: black;
+  background-color: black;
   font-size: 1.5rem;
+}
+
+.Feature_News{
+
+  background: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.Title_Text_For_Choropleth{
+  background-color: white;
+  color: black;
+  margin-bottom: 0rem;
+  padding-top: 0.8rem;
+  font-weight: bold;
+}
+
+.Note_Using_Python{
+  color: black;
+  background-color: white;
+  font-size: 14px;
+}
+
+.Body_Text_For_Choropleth{
+  margin-top: 0rem;
+  color: black;
+  background-color: white;
+}
+.igraph {
+  position: relative;
+  background-color: white;
+}
+.Choropleth_Map {
+  background-color: white;
 }
 
 h1 {
@@ -71,7 +105,6 @@ h3 {
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
   margin-top: 0rem
-  /* box-shadow: 0rem 0rem 0rem 0rem black; */
 }
 
 input {
@@ -83,4 +116,81 @@ input {
   outline: none;
   background: black;
   color: white;
+}
+
+img {
+
+flex:1;
+background: white;
+margin: 0rem 0rem 0rem 0rem;
+width: 400px;
+height: 275px;
+border-radius: 8px;
+}
+
+.Text_Box{
+  background: white;
+  margin: 0rem;
+  flex: 2;
+}
+
+.Box{
+  margin: 0rem;
+  display: inline-table;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 400px;
+  align-content: center;
+  height: 600px;
+  background: white;
+  cursor: pointer;
+}
+
+article_title{
+
+  font: caption;
+  background:black;
+  color: white;
+  text-align: left;
+  font-size:20px;
+  position: right;
+  line-height: 0.8;
+  box-shadow: none;
+}
+
+media_source{
+  background: black;
+  color: white;
+  text-align: left;
+  font-size:25px;
+  box-shadow: white;
+}
+
+article_url{
+  text-align: left;
+  font-size:12px;
+  background: white;
+  color: black;
+}
+
+description{
+  font-style: normal;
+  font: caption;
+  background:black;
+  color: white;
+  text-align: left;
+  font-size:15px;
+}
+
+.a{
+  background: white;
+}
+
+.Heading{
+  background: black;
+  margin-top: -0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
 }

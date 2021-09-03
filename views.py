@@ -1,17 +1,21 @@
 from flask import render_template, request, redirect, url_for, Flask
 from get_climatechange_news import get_climatechange_news
 from get_naturaldisaster_news import get_naturaldisaster_news
+from get_feature_news import get_feature_news
 import json
 
 app = Flask(__name__)
 
 @app.route('/', methods=["POST","GET"])
 def search():
+
+    feature_news = get_feature_news()
+
     if request.method == "POST":
         country = request.form["query"]
         return redirect(url_for("country_page", name_of_country=country))
     else:
-        return render_template("home.html")
+        return render_template("home.html", feature_news=feature_news)
 
 
 @app.route("/<name_of_country>", methods=["POST","GET"])
@@ -35,7 +39,7 @@ def country_page(name_of_country):
         return redirect(url_for("country_page", name_of_country=country))
     else:
         return render_template("index.html",country=name_of_country,data=data_to_send)
-    
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
