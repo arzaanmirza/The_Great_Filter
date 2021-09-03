@@ -10,10 +10,20 @@ Website: https://thegreatfilter.herokuapp.com/
 
 Home Page:
 
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/128723135-680cf51e-6a2a-4ce1-8a6f-0cc2d300d521.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/132024743-841f6899-d5af-48fe-855c-025a15716b49.png">
 
 
 
+
+
+Featured News Section: 
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/132024864-1f706982-9db2-4cce-b7c5-a946b1578250.png">
+
+
+Interactive Choropleth Map showing countries which are the most vulnerable:
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/78077697/132025185-0e36c76a-c89d-4688-9245-435f741281f1.png">
 
 
 After Searching for a country (In this case China):
