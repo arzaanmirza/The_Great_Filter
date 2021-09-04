@@ -1,3 +1,6 @@
+# This function is for the featured news section on the home page. Its for news articles that you would like to personally put up. 
+# It takes in 3 articles at the moment. 
+
 
 def get_feature_news():
 
