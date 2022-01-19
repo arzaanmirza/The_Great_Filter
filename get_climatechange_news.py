@@ -31,15 +31,16 @@ def get_climatechange_news(country_inputted):
     # The point of it is so that a photo can be attached with the article on the website.
 
     # Right now it only works with reuters articles.
-        if media_source == "Reuters":
-            image_inside_article_url = image_capture(article_url)
-        else: # This else statement is only there so that the next if statement works.
-            image_inside_article_url = "empty_string"
+#         if media_source == "Reuters":
+#             image_inside_article_url = image_capture(article_url)
+#         else: # This else statement is only there so that the next if statement works.
+#             image_inside_article_url = "empty_string"
 
-        # Checks if image_capture() function has returned an empty_string or not.
-        if image_inside_article_url == "empty_string":
-            image_inside_article_url = image_capture_database(title)
-
+#         # Checks if image_capture() function has returned an empty_string or not.
+#         if image_inside_article_url == "empty_string":
+#             image_inside_article_url = image_capture_database(title)
+        
+        image_inside_article_url = None
 
     #This if-statement ensures that the country is in the description
     # of the article, this ensures that the news is from the country inputted.
