@@ -4,7 +4,7 @@ import pprint
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
 
-dynamodb = boto3.resource('dynamodb',region_name='ap-southeast-2',aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'])
+dynamodb = boto3.resource('dynamodb',region_name='ap-southeast-2',aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY'))
 
 def get_latest_news_api():
 
