@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for, Flask
 from get_climatechange_news import get_climatechange_news
 from get_naturaldisaster_news import get_naturaldisaster_news
 from get_feature_news import get_feature_news
+from get_personal_api_news import get_personal_api_news
 import json
 
 app = Flask(__name__)
@@ -25,10 +26,10 @@ def country_page(name_of_country):
     # This is where you will get the data from the functions in other files.
     naturaldisaster_data = get_naturaldisaster_news(name_of_country)
     climatechange_data = get_climatechange_news(name_of_country)
-
+    latest_api_news_data = get_personal_api_news()
     # This is where the data files will get merged together into one list
     # which will be sent to the render_template.
-    data_to_send = naturaldisaster_data + climatechange_data
+    data_to_send = naturaldisaster_data + climatechange_data + latest_api_news_data
 
     # If the returning articles list is empty then redirect it to the home search page.
     if not data_to_send:
