@@ -6,7 +6,7 @@ from boto3.dynamodb.conditions import Key, Attr
 
 dynamodb = boto3.resource('dynamodb',region_name='ap-southeast-2',aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY'))
 
-def get_latest_news_api():
+def get_latest_news_api(name_of_country):
 
     list_of_related_articles = []
 
@@ -20,12 +20,20 @@ def get_latest_news_api():
         response = table.scan(ExclusiveStartKey=response['LastEvaluatedKey'])
         items.extend(response['Items'])
 
-    return items
+    # Querying of data
+    queryed_data = []
+    for each_item in items:
+
+        if name_of_country in each_item['Article Title']:
+            queryed_data.append(each_item)
 
 
-def get_personal_api_news():
+    return queryed_data
 
-    items = get_latest_news_api()
+
+def get_personal_api_news(name_of_country):
+
+    items = get_latest_news_api(name_of_country)
 
     list_of_related_articles = []
 
@@ -44,5 +52,3 @@ def get_personal_api_news():
         list_of_related_articles.append(data)
 
     return list_of_related_articles
-
-
