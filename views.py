@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, url_for, Flask
 from get_feature_news import get_feature_news
 from get_personal_api_news import get_personal_api_news
 import json
-
+import os
 app = Flask(__name__)
 
 @app.route('/', methods=["POST","GET"])
