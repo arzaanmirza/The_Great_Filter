@@ -25,7 +25,6 @@ def country_page(name_of_country):
     # This is where the data files will get merged together into one list
     # which will be sent to the render_template.
     data_to_send = latest_api_news_data
-
     # If the returning articles list is empty then redirect it to the home search page.
     if not data_to_send:
         return redirect(url_for("search"))

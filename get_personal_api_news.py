@@ -40,6 +40,10 @@ def get_personal_api_news(name_of_country):
 
     for article in items:
 
+        # Fixing bug where the address starts with www. rather than https:// which encounters errors when clicking on the site.
+        if article['Article URL'].startswith("www."):
+            article['Article URL'] = "https://" + article['Article URL'] 
+
         data = {
 
             "Media": article['Media'],
